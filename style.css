@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+/* ===== animated gradient ===== */
+.bg {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 20% 20%, #8a2be2aa, transparent 40%),
+    radial-gradient(circle at 80% 80%, #00ffff88, transparent 40%);
+  animation: move 10s infinite linear;
+  filter: blur(60px);
+  z-index: -1;
+}
+
+@keyframes move {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-60px,-60px); }
+  100% { transform: translate(0,0); }
+}
+
+/* ===== center ===== */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+/* ===== title ===== */
+.title {
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 10px #a855f7,
+    0 0 40px #a855f7;
+}
+
+/* ===== role ===== */
+.role {
+  margin-top: 10px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+}
+
+/* ===== buttons ===== */
+.buttons {
+  margin-top: 40px;
+}
+
+.buttons a {
+  margin: 10px;
+  padding: 14px 30px;
+  border: 1px solid #a855f7;
+  text-decoration: none;
+  color: #a855f7;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: #a855f7;
+  color: black;
+  box-shadow: 0 0 20px #a855f7;
+}
+
+/* ===== card ===== */
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  padding: 40px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+}
+
+/* ===== project ===== */
+.project {
+  margin: 20px 0;
+  padding: 10px;
+  border-left: 2px solid #a855f7;
+}
+
+/* ===== cursor ===== */
+.cursor {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #a855f7;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+/* ===== reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
